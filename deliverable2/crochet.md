@@ -61,6 +61,10 @@ Crochet stitches are constructed by looping yarn into existing stitches on the c
 
 With a structure like this, a stitch's neighbors, and parents, and children can be easily referenced. This works for simple crochet patterns that are created by the row or in the round. Increases and decreases, an important technique that allows crocheters to increase or decrease the number of stitches in a row. Increases are made by looping two stitches into a parent stitch, and decreases are made by looping one stitich into two parent stitches. To accomodate this, a stitch's parent and child can be modified to referencec multiple parents and multiple children. I made a mock up in p5 which could be found at this level of the repo. 
 
+<img width="525" height="527" alt="image" src="https://github.com/user-attachments/assets/90419b12-e960-417c-ad41-acb0022a6f01" />
+
+Quite honestly its not that good, because I spent a lot of my time researching and reading many papers.
+
 It was about this time where a colleage of mine recommended me the paper [Representing Crochet with Stitch Meshes](https://textiles-lab.github.io/publications/2020-crochet-meshes/) that came out of the CMU Textiles lab. This paper formalized almost all of what I was thinking of, however it does not implement many of the stitches that crocheters use and it does not have a usable interface. 
 
 ## Next Steps
