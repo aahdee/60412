@@ -10,7 +10,7 @@ Crochet patterns are displayed in two differnt formats - textual and visual. Tex
 
 (pattern: https://thecrochetswirl.com/granny-hexagons/) 
 
-Visual patterns describe their insructions by symbols. Similarly to textual patterns, visual patterns provide the key for their patterns before describing their instructions. 
+Visual patterns describe their insructions by symbols. These symbols are ["standardized"](https://www.craftyarncouncil.com/standards/crochet-chart-symbols), however most visual patterns provide the key for their patterns before describing their instructions.
 
 <img width="713" height="977" alt="image" src="https://github.com/user-attachments/assets/458e9c17-2a20-498f-902e-21b48c01f25d" />
 
@@ -29,13 +29,24 @@ Most crocheters are used to textual patterns, so visual patterns are accopanyed 
 There is a style of crochet called *corner to corner* (abbreviated as C2C) whos patterns are commonly represented visually in grids. 
 
 <img width="1492" height="876" alt="image" src="https://github.com/user-attachments/assets/07b7d6ab-cace-4c0f-89f9-ac51f4f6706b" />
+<img width="648" height="601" alt="image" src="https://github.com/user-attachments/assets/d500376f-bed9-4147-9e54-e8e93d148bf4" />
 
 (pattern: https://www.craftematics.com/crochet/corner-to-corner)
+
+Each cell in the grid represent a cluster of stitches of a specific color. 
 
 
 ## Visual Crochet Pattern Editors
 
-Currently there are not that many crochet editors that allow crochet pattern designers to make visual patterns. As of 2026, the most popular option is [StitchFiddle](https://www.stitchfiddle.com/en), an online web editor for knitting and crochet pattens. Its functionality for visiual patterns is very limited as it allows users to drag and drop stitch symbols to a blank page. There isn't a way for a pattern designer to know if their pattern is structually correct (for example, a structually correct crochet pattern starts with chains or a magic ring, and correctly increases and decreases 
+Currently there are not that many crochet editors that allow crochet pattern designers to make visual patterns. As of 2026, the most popular option is [StitchFiddle](https://www.stitchfiddle.com/en), an online web editor for knitting and crochet pattens. Its functionality for visiual patterns is very limited as it allows users to drag and drop stitch symbols to a blank page. There isn't a way for a pattern designer to know if their pattern is structually correct (for example, a structually correct crochet pattern starts with chains or a magic ring, and correctly adds and removes stitches in a way that mathematically makes sense). Because of this, StitchFiddle does not allow users to export freeform crochet patterns as written instructions.
+
+<img width="1622" height="1013" alt="image" src="https://github.com/user-attachments/assets/a1a08df6-c04d-42a0-af34-75ce03b6e068" />
+
+
+Another option is [CrochetPARADE](https://www.crochetparade.org/), a genuinely impressvie crochet pattern visualizer that uses a scripting language that is similar to crochet patterns. It works well with 2D and 3D patterns, simulates the length of different stitches, and allows users to encode their own stitches. This application doesnt fit my needs as it does not support visual patterns.  
+
+<img width="1605" height="1015" alt="image" src="https://github.com/user-attachments/assets/3c6f41ba-1801-43b2-a2d9-1622f53f4288" />
+
 
 
 ## Data structures!
@@ -48,9 +59,13 @@ Crochet stitches are constructed by looping yarn into existing stitches on the c
 
 (pattern: https://attic24.co.uk/posts/neat-ripple-pattern/)
 
-With a structure like this, a stitch's neighbors, and parents, and children can be easily referenced. This works for simple crochet patterns that are created by the row or in the round. Increases and decreases, an important technique that allows crocheters to increase or decrease the number of stitches by stitching into
+With a structure like this, a stitch's neighbors, and parents, and children can be easily referenced. This works for simple crochet patterns that are created by the row or in the round. Increases and decreases, an important technique that allows crocheters to increase or decrease the number of stitches in a row. Increases are made by looping two stitches into a parent stitch, and decreases are made by looping one stitich into two parent stitches. To accomodate this, a stitch's parent and child can be modified to referencec multiple parents and multiple children. I made a mock up in p5 which could be found here. 
 
+It was about this time where a colleage of mine recommended me the paper [Representing Crochet with Stitch Meshes](https://textiles-lab.github.io/publications/2020-crochet-meshes/) that came out of the CMU Textiles lab. This paper formalized almost all of what I was thinking of, however it does not implement many of the stitches that crocheters use and it does not have a usable interface. 
 
+## Next Steps
+
+Ive obtained access to the code used in the paper
 
 
 
