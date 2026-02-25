@@ -65,7 +65,7 @@ It was about this time where a colleage of mine recommended me the paper [Repres
 
 ## Next Steps
 
-Ive obtained access to the code used in the paper
+Ive obtained access to the code used in the Representing Crochet with Stitch Meshes paper. Quite honestly I think that this project can be bigger than something that I just whip up in p5, so if I can extended an exisiting codebase and makit more useable, I will be very satisfied. 
 
 
 
